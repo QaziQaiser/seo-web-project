@@ -1,0 +1,1611 @@
+﻿<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1V4SYRQNML"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1V4SYRQNML');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Web Design &amp; SEO Services NZ | Websol Digital Solutions</title>
+  <meta name="description" content="Websol Digital Solutions provides high-performance web development and result-driven SEO services in New Zealand. Calculate your website cost instantly online.">
+  <meta name="keywords" content="website cost calculator NZ, web design NZ, SEO services NZ, web development New Zealand, WEBSOL Digital Solutions">
+  <meta name="theme-color" content="#0B132B">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Websol Digital Solutions">
+  <meta property="og:title" content="Home - Web Design &amp; SEO Services NZ | Websol Digital Solutions">
+  <meta property="og:locale" content="en_NZ">
+  <meta property="og:url" content="https://websol.nz/">
+  <meta property="og:description" content="Websol Digital Solutions provides high-performance web development and result-driven SEO services in New Zealand. Estimate your website cost with our free calculator.">
+  <meta property="og:image" content="assets/images/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Website Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Embedded Calculator & Page Content Styles -->
+  <style>
+    :root {
+      --navy: #0B132B;
+      --navy2: #1C2541;
+      --green: #0066FF;
+      --green-d: #0052CC;
+      --green-l: #E6F0FF;
+      --ink: #0F172A;
+      --muted: #475569;
+      --line: #E2E8F0;
+      --soft: #F8FAFC;
+      --r: 16px;
+      --shadow: 0 12px 32px rgba(11, 19, 43, .09);
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.65;
+      font-size: 17px;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--navy);
+      font-family: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.2;
+      margin: 0 0 .6em;
+      letter-spacing: -0.01em;
+    }
+    
+    h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); }
+    h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); }
+    h3 { font-size: 1.2rem; }
+    p { margin: 0 0 1em; }
+    
+    .wrap {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      white-space: nowrap;
+    }
+
+    /* Calculator & Content Buttons */
+    .hero .btn, .sec .btn, .actions .btn, .calc .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .18s, transform .18s, box-shadow .18s;
+    }
+    
+    .hero .btn-primary, .sec .btn-primary, .actions .btn-primary, .calc .btn-primary {
+      background: var(--green);
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(0, 102, 255, .28);
+    }
+    
+    .hero .btn-primary:hover, .sec .btn-primary:hover, .actions .btn-primary:hover, .calc .btn-primary:hover {
+      background: var(--green-d);
+      transform: translateY(-1px);
+    }
+    
+    .btn-ghost {
+      background: #fff;
+      color: var(--navy);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      min-height: 48px;
+      padding: 0 24px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .18s, border-color .18s;
+    }
+    
+    .btn-ghost:hover {
+      border-color: var(--navy2);
+      background: var(--soft);
+    }
+    
+    .btn-link {
+      background: none;
+      border: 0;
+      color: var(--navy2);
+      text-decoration: underline;
+      min-height: 44px;
+      padding: 0 8px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    
+    .btn[disabled] {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(180deg, #F8FAFC 0, #fff 100%);
+      padding: clamp(36px, 6vw, 80px) 0 clamp(40px, 6vw, 70px);
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .eyebrow {
+      display: inline-block;
+      font-weight: 600;
+      color: var(--green-d);
+      background: var(--green-l);
+      border-radius: 99px;
+      padding: 6px 14px;
+      font-size: .95rem;
+      margin-bottom: 16px;
+    }
+    
+    .lead {
+      font-size: 1.12rem;
+      color: var(--muted);
+      max-width: 56ch;
+    }
+    
+    .benefits {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 26px;
+      display: grid;
+      gap: 10px;
+    }
+    
+    .benefits li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-weight: 500;
+      color: var(--navy);
+    }
+    
+    .tick {
+      flex: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--green);
+      position: relative;
+      margin-top: 2px;
+    }
+    
+    .tick::after {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 4px;
+      width: 5px;
+      height: 10px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+    
+    .trust {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* 3D Scene */
+    .scene {
+      perspective: 1200px;
+      display: grid;
+      place-items: center;
+      min-height: 400px;
+      touch-action: pan-y;
+    }
+    
+    .stack {
+      position: relative;
+      width: min(100%, 430px);
+      height: 330px;
+      transform-style: preserve-3d;
+      transform: rotateX(calc(10deg + var(--rx, 0) * -9deg)) rotateY(calc(-22deg + var(--ry, 0) * 14deg));
+      transition: transform .25s ease-out;
+    }
+    
+    .layer {
+      position: absolute;
+      border-radius: 18px;
+    }
+    
+    .l-base {
+      inset: 34px 18px 4px;
+      background: var(--navy);
+      transform: translateZ(-80px);
+      box-shadow: 0 40px 60px rgba(11, 19, 43, .28);
+    }
+    
+    .l-mid {
+      inset: 22px 8px 18px;
+      background: var(--green-l);
+      border: 1px solid #C8DCFF;
+      transform: translateZ(-36px);
+    }
+    
+    .l-browser {
+      inset: 6px 0 30px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px rgba(11, 19, 43, .14);
+      padding: 14px 16px;
+      transform: translateZ(0);
+    }
+    
+    .dots {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    
+    .dots i {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #cfd8e5;
+    }
+    
+    .sk {
+      height: 10px;
+      border-radius: 6px;
+      background: #e6ecf4;
+      margin-bottom: 10px;
+    }
+    
+    .sk.t {
+      height: 18px;
+      width: 62%;
+      background: var(--navy);
+      opacity: .9;
+    }
+    
+    .sk.w { width: 86%; }
+    .sk.s { width: 48%; }
+    
+    .sk-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 16px 0;
+    }
+    
+    .sk-grid b {
+      display: block;
+      height: 64px;
+      border-radius: 10px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+    }
+    
+    .sk-btn {
+      width: 120px;
+      height: 34px;
+      border-radius: 9px;
+      background: var(--green);
+    }
+    
+    .l-price {
+      right: -18px;
+      top: 34px;
+      width: 190px;
+      padding: 14px 16px;
+      background: var(--navy);
+      color: #fff;
+      transform: translateZ(95px);
+      box-shadow: 0 22px 36px rgba(11, 19, 43, .35);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .l-price small {
+      display: block;
+      color: #b9c8e6;
+      font-size: .78rem;
+    }
+    
+    .l-price strong {
+      display: block;
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .chip {
+      padding: 10px 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      font-weight: 600;
+      color: var(--navy);
+      font-size: .9rem;
+      box-shadow: 0 14px 26px rgba(11, 19, 43, .16);
+    }
+    
+    .chip::before {
+      content: "";
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+      margin-right: 8px;
+    }
+    
+    .c1 { left: -22px; bottom: 70px; transform: translateZ(70px); animation: float 7s ease-in-out infinite .6s; }
+    .c2 { left: 34px; bottom: 8px; transform: translateZ(110px); animation: float 5.5s ease-in-out infinite 1.2s; }
+    .c3 { right: 20px; bottom: 36px; transform: translateZ(60px); animation: float 6.5s ease-in-out infinite .3s; }
+    
+    @keyframes float { 50% { margin-top: -9px; } }
+    
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .scene { min-height: 360px; }
+    }
+    
+    @media (max-width: 480px) {
+      .stack { height: 290px; width: 92%; }
+      .l-price { right: -6px; width: 160px; }
+      .l-price strong { font-size: 1.25rem; }
+      .c1 { left: -6px; }
+    }
+
+    /* Sections */
+    .sec { padding: clamp(44px, 6vw, 84px) 0; }
+    .sec.alt { background: var(--soft); }
+    .sec-head { max-width: 760px; margin-bottom: 28px; }
+    .sec-head p { color: var(--muted); }
+
+    /* Calculator Box */
+    .calc {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: clamp(18px, 3.2vw, 38px);
+    }
+    
+    .calc-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+    
+    .live {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green-l);
+      border: 1px solid #C8DCFF;
+      color: var(--navy);
+      padding: 8px 16px;
+      border-radius: 99px;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+    
+    .live b { color: var(--green-d); font-size: 1.05rem; }
+    .pbar { height: 6px; background: var(--soft); border-radius: 99px; overflow: hidden; margin-bottom: 14px; }
+    .pbar i { display: block; height: 100%; width: 0; background: var(--green); border-radius: 99px; transition: width .3s; }
+    .progress { list-style: none; margin: 0 0 8px; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+    .pstep { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 6px; background: none; border: 0; padding: 6px 2px; font: inherit; font-size: .82rem; color: var(--muted); cursor: pointer; border-radius: 10px; min-height: 48px; }
+    .pstep .n { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; background: var(--soft); border: 1px solid var(--line); color: var(--navy); }
+    .pstep.done .n { background: var(--green); border-color: var(--green); color: #fff; }
+    .pstep[aria-current="step"] .n { background: var(--navy); border-color: var(--navy); color: #fff; }
+    .pstep[aria-current="step"] { color: var(--navy); font-weight: 600; }
+    .pstep .lbl { text-align: center; line-height: 1.2; }
+    .stepline { margin: 0 0 20px; color: var(--muted); font-size: .95rem; }
+    @media (max-width: 640px) { .pstep .lbl { display: none; } }
+    
+    .step h3 { font-size: clamp(1.3rem, 2.6vw, 1.6rem); }
+    .step > .sub { color: var(--muted); margin-bottom: 20px; }
+    .opts { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; perspective: 900px; }
+    .opt { position: relative; display: block; cursor: pointer; }
+    .opt input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; z-index: 2; }
+    .opt-body { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 18px 18px 16px; border: 1.5px solid var(--line); border-radius: var(--r); background: #fff; transition: transform .2s, box-shadow .2s, border-color .2s, background .2s; transform-style: preserve-3d; }
+    .opt:hover .opt-body { transform: translateY(-4px) rotateX(2.5deg); box-shadow: 0 16px 28px rgba(11, 19, 43, .12); border-color: #b8c4d6; }
+    .opt input:checked + .opt-body { border-color: var(--green); background: var(--green-l); box-shadow: 0 0 0 3px rgba(0, 102, 255, .18), 0 16px 28px rgba(0, 102, 255, .12); }
+    .opt input:checked + .opt-body::after { content: ""; position: absolute; top: 14px; right: 14px; width: 22px; height: 22px; border-radius: 50%; background: var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat; }
+    .opt input:focus-visible + .opt-body { outline: 3px solid var(--navy2); outline-offset: 3px; }
+    .opt.is-included .opt-body { background: var(--soft); border-style: dashed; }
+    .opt input:disabled { cursor: default; }
+    .opt-ic { width: 42px; height: 42px; border-radius: 12px; background: var(--soft); display: grid; place-items: center; color: var(--navy); transform: translateZ(18px); }
+    .opt input:checked + .opt-body .opt-ic { background: #fff; color: var(--green-d); }
+    .opt-ic svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .opt-t { font-weight: 700; color: var(--navy); padding-right: 26px; }
+    .opt-d { color: var(--muted); font-size: .93rem; line-height: 1.5; }
+    .opt-tag { align-self: flex-start; font-size: .78rem; font-weight: 600; padding: 3px 10px; border-radius: 99px; background: var(--soft); color: var(--navy2); border: 1px solid var(--line); }
+    .opt-tag.inc { background: var(--green); color: #fff; border-color: var(--green); }
+    
+    .callout { border-left: 4px solid var(--green); background: var(--soft); padding: 12px 16px; border-radius: 0 12px 12px 0; margin: 18px 0; font-size: .95rem; color: var(--ink); }
+    .helper { margin-top: 16px; padding: 16px; border: 1px dashed #9fb1c9; border-radius: var(--r); background: #fbfcfe; }
+    .helper h4 { margin-bottom: .4em; }
+    .helper-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .helper-btns button { min-height: 44px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line); background: #fff; font: inherit; color: var(--navy); cursor: pointer; }
+    .helper-btns button:hover { border-color: var(--green); background: var(--green-l); }
+    
+    .q { border: 0; padding: 0; margin: 0 0 26px; min-width: 0; }
+    .q legend { font-weight: 700; color: var(--navy); padding: 0; margin-bottom: 4px; font-size: 1.05rem; }
+    .q .help { color: var(--muted); font-size: .93rem; margin: 0 0 10px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill { position: relative; }
+    .pill input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+    .pill span { display: inline-flex; align-items: center; min-height: 46px; padding: 0 18px; border: 1.5px solid var(--line); border-radius: 99px; background: #fff; font-weight: 500; transition: all .18s; }
+    .pill:hover span { border-color: #9fb1c9; }
+    .pill input:checked + span { border-color: var(--green); background: var(--green-l); color: var(--navy); font-weight: 600; }
+    .pill input:focus-visible + span { outline: 3px solid var(--navy2); outline-offset: 3px; }
+    
+    .msg { margin: 16px 0 0; padding: 12px 16px; border-radius: 12px; background: #fff7e6; border: 1px solid #f1d28b; color: #5c3d00; font-size: .97rem; }
+    .calc-nav { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); }
+    .calc-nav .grp { display: flex; gap: 12px; flex-wrap: wrap; }
+    
+    /* Summary Step */
+    .sum { margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+    .sum li { display: flex; gap: 14px; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid var(--line); background: #fff; }
+    .sum li:last-child { border-bottom: 0; }
+    .sum .k { font-size: .85rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+    .sum .v { color: var(--navy); font-weight: 500; word-break: break-word; }
+    .sum button { flex: none; min-height: 40px; padding: 0 16px; border-radius: 10px; border: 1px solid var(--line); background: #fff; font: inherit; color: var(--navy); cursor: pointer; }
+    .sum button:hover { border-color: var(--green); background: var(--green-l); }
+    
+    .prelim { margin-top: 18px; padding: 18px; border-radius: var(--r); background: var(--navy); color: #fff; }
+    .prelim strong { font-size: 1.5rem; display: block; }
+    .prelim p { margin: 6px 0 0; color: #c7d3ea; font-size: .93rem; }
+    
+    /* Result Step */
+    .result { perspective: 1000px; margin-bottom: 22px; }
+    .result-card { padding: clamp(22px, 4vw, 36px); border-radius: 22px; background: linear-gradient(145deg, var(--navy), var(--navy2)); color: #fff; transform: rotateX(3deg); box-shadow: 0 30px 50px rgba(11, 19, 43, .28); transform-style: preserve-3d; }
+    .result-card .lab { color: #b9c8e6; font-weight: 600; }
+    .result-card .big { display: block; font-size: clamp(2.6rem, 8vw, 4.2rem); line-height: 1.1; font-weight: 800; margin: 6px 0; transform: translateZ(30px); }
+    .result-card .rng { font-size: 1.05rem; color: #e3ebfa; }
+    .result-card .note { margin: 12px 0 0; font-size: .93rem; color: #c7d3ea; }
+    
+    .bd { width: 100%; border-collapse: collapse; margin: 8px 0 20px; font-size: .98rem; }
+    .bd caption { text-align: left; font-weight: 700; color: var(--navy); padding-bottom: 8px; font-size: 1.05rem; }
+    .bd th, .bd td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .bd td:last-child { text-align: right; white-space: nowrap; font-weight: 600; color: var(--navy); }
+    .bd td.opt-note { font-weight: 400; color: var(--muted); white-space: normal; }
+    .bd tfoot th, .bd tfoot td { border-bottom: 0; border-top: 2px solid var(--navy); font-size: 1.05rem; }
+    
+    .dis { margin: 0 0 20px; padding-left: 20px; color: var(--ink); font-size: .95rem; }
+    .dis li { margin-bottom: 6px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .status { min-height: 1.4em; color: var(--muted); font-size: .93rem; margin-top: 10px; }
+
+    /* Content Cards & Grids */
+    .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 22px; transition: transform .2s, box-shadow .2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 28px rgba(11, 19, 43, .1); }
+    .card h3 { margin-bottom: .4em; }
+    .card p { margin: 0; color: var(--muted); font-size: .97rem; }
+    
+    .tiers { display: grid; gap: 14px; }
+    .tier { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 18px; background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 18px 20px; }
+    .tier b { color: var(--green-d); font-size: 1.08rem; }
+    .tier p { margin: 0; color: var(--muted); }
+    @media (max-width: 640px) { .tier { grid-template-columns: 1fr; gap: 4px; } }
+    
+    .ol { counter-reset: s; list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+    .ol li { counter-increment: s; position: relative; padding: 16px 18px 16px 64px; background: #fff; border: 1px solid var(--line); border-radius: var(--r); }
+    .ol li::before { content: counter(s); position: absolute; left: 16px; top: 14px; width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: #fff; display: grid; place-items: center; font-weight: 700; }
+    .ol strong { color: var(--navy); }
+    
+    .tw { overflow-x: auto; margin-bottom: 22px; border: 1px solid var(--line); border-radius: var(--r); background: #fff; }
+    .tw table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .tw caption { text-align: left; font-weight: 700; color: var(--navy); padding: 14px 16px 6px; }
+    .tw th, .tw td { padding: 10px 16px; border-bottom: 1px solid var(--line); text-align: left; }
+    .tw td:nth-child(2) { white-space: nowrap; font-weight: 600; color: var(--navy); }
+    .tw tr:last-child td { border-bottom: 0; }
+    
+    .cities { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+    .city { background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 20px; border-top: 4px solid var(--green); }
+    .city h3 { margin-bottom: .35em; }
+    .city p { margin: 0; color: var(--muted); font-size: .96rem; }
+    
+    .faq-list { display: grid; gap: 12px; max-width: 880px; }
+    .faq-list details { background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 0 20px; }
+    .faq-list details[open] { border-color: var(--green); box-shadow: 0 10px 22px rgba(11, 19, 43, .07); }
+    .faq-list summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 14px; align-items: center; min-height: 56px; padding: 10px 0; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary h3 { margin: 0; font-size: 1.05rem; }
+    .faq-list summary::after { content: "+"; flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--soft); display: grid; place-items: center; font-weight: 700; color: var(--navy); }
+    .faq-list details[open] summary::after { content: "\2212"; background: var(--green); color: #fff; }
+    .faq-list p { margin: 0 0 18px; color: var(--muted); }
+    
+    #printArea { display: none; }
+    noscript .msg { margin: 20px; }
+    
+    @media print {
+      body > *:not(#printArea) { display: none !important; }
+      #printArea { display: block !important; padding: 0; }
+      #printArea table { width: 100%; border-collapse: collapse; }
+      #printArea th, #printArea td { border-bottom: 1px solid #ccc; padding: 8px; text-align: left; }
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .stack { transform: rotateX(10deg) rotateY(-22deg) !important; }
+      .opt:hover .opt-body, .card:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-contact">
+        <a href="mailto:info@websol.nz" class="top-bar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>info@websol.nz</span>
+        </a>
+        <a href="tel:+923249098917" class="top-bar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>+92 324 9098917</span>
+        </a>
+      </div>
+      <div class="top-bar-badge">
+        🚀 Ready for New Projects • Free 30-Min Strategy Call
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="WEBSOL Digital Solutions Home">
+        <img src="assets/images/logo.png" alt="WEBSOL Digital Solutions Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="gst-calculator-nz-seo.html" class="nav-link">GST Calculator</a></li>
+          <li><a href="web-development.html" class="nav-link">Web Development</a></li>
+          <li><a href="seo-services.html" class="nav-link">SEO Services</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="https://blogs.websol.nz/" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="header-actions">
+        <a href="#estimator" class="btn btn-primary btn-sm">Cost Calculator</a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section with 3D Tilt Scene -->
+    <section class="hero" aria-labelledby="h1">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Plan Your Website. Know Your Budget.</span>
+          <h1 id="h1">Website Price Estimator NZ</h1>
+          <p class="lead">Estimate the cost of a website in New Zealand by choosing your website type, preferred design, required features and a few project details. You get an instant figure in New Zealand dollars, and you do not need any web design knowledge to use it.</p>
+          <ul class="benefits">
+            <li><span class="tick" aria-hidden="true"></span>Easy to use, even for beginners</li>
+            <li><span class="tick" aria-hidden="true"></span>Instant website cost estimate</li>
+            <li><span class="tick" aria-hidden="true"></span>Flexible options for different website needs</li>
+          </ul>
+          <a class="btn btn-primary" href="#estimator" id="ctaStart">Start Your Free Estimate</a>
+          <p class="trust">Free to use. No sign-up required. No technical knowledge needed.</p>
+        </div>
+        <div class="scene" id="scene" aria-hidden="true">
+          <div class="stack" id="stack">
+            <div class="layer l-base"></div>
+            <div class="layer l-mid"></div>
+            <div class="layer l-browser">
+              <div class="dots"><i></i><i></i><i></i></div>
+              <div class="sk t"></div><div class="sk w"></div><div class="sk s"></div>
+              <div class="sk-grid"><b></b><b></b><b></b></div>
+              <div class="sk-btn"></div>
+            </div>
+            <div class="layer l-price"><small>Estimate range in NZD</small><strong>NZ$200 to NZ$3,000</strong></div>
+            <div class="layer chip c1">Design</div>
+            <div class="layer chip c2">Features</div>
+            <div class="layer chip c3">SEO</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Calculator Section -->
+    <section class="sec" id="estimator" aria-labelledby="calcTitle">
+      <div id="calculator"></div>
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="calcTitle" tabindex="-1">Free Website Cost Calculator for New Zealand</h2>
+          <p>Work through six short steps. You can go back at any time and your choices are kept. Everything is calculated in your browser, and nothing you select is sent anywhere.</p>
+        </div>
+        <noscript><p class="msg">This calculator needs JavaScript to run. Please enable JavaScript in your browser to use it.</p></noscript>
+        <div class="calc">
+          <div class="calc-top">
+            <p class="stepline" id="stepLine" style="margin:0" aria-live="polite"></p>
+            <div class="live" id="liveBox" aria-live="polite">Choose a website type to see a live estimate</div>
+          </div>
+          <div class="pbar" aria-hidden="true"><i id="pfill"></i></div>
+          <ol class="progress" id="progress" aria-label="Calculator progress"></ol>
+
+          <form id="calcForm" novalidate onsubmit="return false">
+            <section class="step" data-step="1" aria-labelledby="t1">
+              <h3 id="t1" tabindex="-1">What Type of Website Do You Need?</h3>
+              <p class="sub">Choose the option that best describes your idea. If you are unsure, select the closest match.</p>
+              <fieldset class="opts" id="typeList"><legend class="sr-only">Website type</legend></fieldset>
+              <div class="helper" id="typeHelper" hidden>
+                <h4>Not sure? Start with what you want visitors to do</h4>
+                <p style="margin:0;color:var(--muted);font-size:.95rem">Pick the closest goal and we will select a sensible website type for you. You can change it later. If you leave Not Sure selected, the estimate is calculated as a Business Website.</p>
+                <div class="helper-btns" id="helperBtns"></div>
+              </div>
+            </section>
+
+            <section class="step" data-step="2" aria-labelledby="t2" hidden>
+              <h3 id="t2" tabindex="-1">How Would You Like Your Website to Look?</h3>
+              <p class="sub">Choose a visual style that matches your idea. You do not need to know any design terminology.</p>
+              <fieldset class="opts" id="designList"><legend class="sr-only">Design style</legend></fieldset>
+              <p class="callout">The final design cost depends on how complex the chosen style is. Simple layouts take less time to design than tailored ones.</p>
+              <fieldset class="q">
+                <legend>Do You Have a Design Example You Like?</legend>
+                <p class="help">Optional. You do not need to upload anything or share a link. This only helps you plan what to show your developer.</p>
+                <div class="pills" id="exampleList"></div>
+              </fieldset>
+            </section>
+
+            <section class="step" data-step="3" aria-labelledby="t3" hidden>
+              <h3 id="t3" tabindex="-1">What Would You Like Your Website to Do?</h3>
+              <p class="sub">Select the features that would make your website useful to your visitors. You can choose as many as you like.</p>
+              <p class="callout">Some features rely on third-party services, paid subscriptions, extra configuration or ongoing fees. Those outside costs are not part of this estimate. Features already included with your website type are marked and are not charged twice.</p>
+              <fieldset class="opts" id="featureList"><legend class="sr-only">Website features</legend></fieldset>
+            </section>
+
+            <section class="step" data-step="4" aria-labelledby="t4" hidden>
+              <h3 id="t4" tabindex="-1">Tell Us a Little More About Your Website</h3>
+              <p class="sub">Answer a few simple questions. If you are unsure, choose the "not sure" option and the estimate will use a sensible assumption.</p>
+              <div id="detailQs"></div>
+            </section>
+
+            <section class="step" data-step="5" aria-labelledby="t5" hidden>
+              <h3 id="t5" tabindex="-1">Review Your Website Plan</h3>
+              <p class="sub">Check your choices below. Use Edit beside any item to change it. Your other answers will be kept.</p>
+              <ul class="sum" id="summaryList"></ul>
+              <div class="prelim" id="prelim"></div>
+            </section>
+
+            <section class="step" data-step="6" aria-labelledby="t6" hidden>
+              <h3 id="t6" tabindex="-1">Your Website Cost Estimate</h3>
+              <div id="estimateBody"></div>
+            </section>
+
+            <p class="msg" id="stepMsg" role="status" hidden></p>
+
+            <div class="calc-nav">
+              <button type="button" class="btn btn-ghost" id="backBtn">Back</button>
+              <div class="grp">
+                <button type="button" class="btn-link" id="resetBtn">Start Again</button>
+                <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- How This Estimate Is Calculated -->
+    <section class="sec alt" id="method" aria-labelledby="h-method">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="h-method">How This Estimate Is Calculated</h2>
+          <p>The calculator follows a fixed set of rules, so the same choices always give the same result. Nothing is random and nothing is learned from other visitors.</p>
+        </div>
+        <div class="cols" style="margin-bottom:24px">
+          <div class="card"><h3>1. Start with the website type</h3><p>Each type has a starting amount that covers a basic build. An online store starts higher than a simple information site because it needs more setup.</p></div>
+          <div class="card"><h3>2. Add design and size</h3><p>A more tailored design and a larger number of pages each add to the total. If you are unsure about the page count, the calculator assumes 6 to 10 pages.</p></div>
+          <div class="card"><h3>3. Add features and content</h3><p>Features that your website type already includes are free of extra charge. Content help and SEO setup are added only if you ask for them.</p></div>
+          <div class="card"><h3>4. Apply the limits</h3><p>The total is rounded to the nearest NZ$10 and always kept between NZ$200 and NZ$3,000. A range is shown because real projects rarely land on one exact figure.</p></div>
+        </div>
+        <p>These amounts are planning assumptions built into this calculator. They are not market averages, survey results or published rates from any New Zealand business. The tables below show every amount the calculator uses. The estimate excludes domain registration, hosting, premium plugins, payment processing fees, third-party subscriptions, GST and other taxes, and ongoing maintenance.</p>
+        <div id="modelTables"></div>
+      </div>
+    </section>
+
+    <!-- Pricing Guide Section -->
+    <section class="sec" id="guide" aria-labelledby="h-cost">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="h-cost">How Much Does a Website Cost in New Zealand?</h2>
+          <p>There is no single price for a website. The cost depends on what the site needs to do, how many pages it has, how it should look, and who prepares the content.</p>
+        </div>
+        <p style="max-width:780px">A one-page introduction for a sole trader sits at one end of the scale. An online store with payments, customer accounts and a large product range sits at the other. Most small business websites fall somewhere between the two.</p>
+        <p style="max-width:780px">This estimator covers builds from NZ$200 to NZ$3,000. Larger or highly customised projects need a proper assessment by a developer, because the scope is too individual to price with a few questions.</p>
+        <div class="cols" style="margin:22px 0">
+          <div class="card"><h3>A simple information website</h3><p>A few pages, clear text, a contact form and a straightforward layout. Most of the work is setting up the structure and preparing the content, so the cost stays modest.</p></div>
+          <div class="card"><h3>A feature-rich online store</h3><p>Product pages, a catalogue, checkout, payment setup and often customer accounts. Each part has to be built, tested and connected to outside services, which raises the cost.</p></div>
+        </div>
+        <p style="max-width:780px">Treat the result as a starting point for a conversation with a developer. It is an indicative estimate, not a quote, and it is not based on research into what New Zealand web designers charge.</p>
+      </div>
+    </section>
+
+    <!-- Factors Section -->
+    <section class="sec alt" id="factors" aria-labelledby="h-factors">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="h-factors">What Affects the Cost of a Website?</h2>
+          <p>A website with more moving parts takes longer to plan, build and test, and that time is what you pay for. These are the main factors.</p>
+        </div>
+        <div class="cols">
+          <div class="card"><h3>Website size</h3><p>Every extra page needs layout, writing and checking. Ten pages take noticeably longer than three.</p></div>
+          <div class="card"><h3>Design complexity</h3><p>A clean layout using standard sections is quicker than a tailored design with custom artwork and carefully tuned typography.</p></div>
+          <div class="card"><h3>Custom functionality</h3><p>Anything that behaves differently from a standard page, such as calculators or member areas, needs extra development and testing.</p></div>
+          <div class="card"><h3>E-commerce requirements</h3><p>Selling online adds product management, checkout, payment setup, shipping settings and more careful testing.</p></div>
+          <div class="card"><h3>Content creation</h3><p>Writing text, sourcing photos and organising a logo takes time. Having your content ready usually reduces the work.</p></div>
+          <div class="card"><h3>SEO requirements</h3><p>Basic SEO covers page titles, descriptions and headings. Wider assistance involves more research and more pages of work.</p></div>
+          <div class="card"><h3>Integrations</h3><p>Booking tools, maps, chat and payment providers connect to outside services, each with its own setup and sometimes its own fees.</p></div>
+          <div class="card"><h3>Ongoing maintenance</h3><p>Updates, backups and security checks keep a site healthy. This is usually charged separately from the initial build.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Budget Section -->
+    <section class="sec" id="budget" aria-labelledby="h-budget">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="h-budget">What Can You Get for Your Website Budget?</h2>
+          <p>These bands describe how this calculator behaves across its NZ$200 to NZ$3,000 range. They are not promises that any feature can be delivered for a set amount. Your final scope depends on your selections and the assumptions listed above.</p>
+        </div>
+        <div class="tiers">
+          <div class="tier"><b>NZ$200 to NZ$600</b><p>Small websites with a handful of pages, a simple design, ready-made content and basic features such as a contact form. Suits a sole trader or someone starting with a simple online presence.</p></div>
+          <div class="tier"><b>NZ$600 to NZ$1,200</b><p>A fuller business website with a more polished design, up to ten pages, and extras like a gallery, reviews or a map. Basic SEO setup often fits in this band.</p></div>
+          <div class="tier"><b>NZ$1,200 to NZ$2,000</b><p>Booking websites or small online stores with more pages, several added features and some help preparing content.</p></div>
+          <div class="tier"><b>NZ$2,000 to NZ$3,000</b><p>Larger websites with a premium or tailored design, many features and wider SEO help. Projects that reach NZ$3,000 in the calculator may need a separate assessment because their real scope can be higher.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- One-Off vs Ongoing Costs -->
+    <section class="sec alt" id="costs" aria-labelledby="h-costs">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="h-costs">One-Off Website Costs vs Ongoing Costs</h2>
+          <p>Many people budget for the build and forget what follows. It helps to separate the two from the start.</p>
+        </div>
+        <div class="cols">
+          <div class="card"><h3>One-off costs</h3><p>Planning, design, page building, setting up features, preparing content and basic SEO setup. These are paid once, usually while the site is being made. This estimator focuses on this part.</p></div>
+          <div class="card"><h3>Ongoing costs</h3><p>Hosting, domain renewals, maintenance, security updates, backups, and subscriptions for tools such as booking systems, chat or email services. These usually recur monthly or yearly, and amounts vary by provider, so check current pricing before you commit.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planning Section -->
+    <section class="sec" id="plan" aria-labelledby="h-plan">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="h-plan">How to Plan Your Website Project</h2>
+          <p>A little preparation makes the process smoother and the estimate more accurate.</p>
+        </div>
+        <ol class="ol">
+          <li><strong>Identify the main purpose.</strong> Decide whether visitors should call you, book, buy or read. Everything else on the site should support that goal.</li>
+          <li><strong>List the essential pages.</strong> Most sites need a home page, a page for each main service or product group, an about page and a way to make contact.</li>
+          <li><strong>Choose only the features you need first.</strong> You can add more later. Starting lean keeps the initial cost down.</li>
+          <li><strong>Prepare text and images where possible.</strong> Clear descriptions, a logo and good photos speed up the build and improve the result.</li>
+          <li><strong>Consider future expansion.</strong> If you may add a shop or a blog later, tell your developer now so the foundation suits it.</li>
+          <li><strong>Keep recurring expenses in mind.</strong> Allow for hosting, domain renewals, maintenance and any subscriptions alongside the build cost.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="sec alt" id="why" aria-labelledby="h-why">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="h-why">Why Use a Website Price Estimator?</h2>
+        </div>
+        <p style="max-width:780px">An estimator helps you organise your requirements before you speak to anyone. Working through the steps makes you decide what type of site you need, how it should look and which features matter. That clarity makes conversations with developers faster and more focused.</p>
+        <p style="max-width:780px">It also lets you compare different scopes. You can see how a larger page count or an extra feature changes the figure, and then build a preliminary budget. It cannot promise savings, search rankings or sales. It simply gives you a reasonable place to start.</p>
+      </div>
+    </section>
+
+    <!-- Cities Across NZ -->
+    <section class="sec" id="cities" aria-labelledby="h-cities">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="h-cities">Website Cost Planning Across New Zealand</h2>
+          <p>People and businesses across the country need different kinds of websites depending on their goals, customers and services. The examples below show what someone in each city might think about when planning. They are general ideas, not claims about specific local businesses, and this estimator does not change its figures by location.</p>
+        </div>
+        <div class="cities">
+          <div class="city"><h3>Auckland</h3><p>With many service providers in one large market, a business may want clear service descriptions, an enquiry form and a map so customers can see where it operates.</p></div>
+          <div class="city"><h3>Christchurch</h3><p>A trades or building business could focus on a gallery of completed work, customer reviews and a simple way to request a quote.</p></div>
+          <div class="city"><h3>Wellington</h3><p>Consultants and creative professionals often benefit from a portfolio that shows past projects, plus a short about page that explains their experience.</p></div>
+          <div class="city"><h3>Hamilton</h3><p>A local retailer might start with a product catalogue and a contact form, then add online payments once the range is settled.</p></div>
+          <div class="city"><h3>Tauranga</h3><p>Hospitality and tourism operators may want online booking, photos of their experience and a map so visitors can plan their trip.</p></div>
+          <div class="city"><h3>Dunedin</h3><p>Makers and small producers could pair a product catalogue with a short story page, so customers understand what makes the products different.</p></div>
+          <div class="city"><h3>Lower Hutt</h3><p>A neighbourhood service business can keep things practical with opening hours, a service list, a contact form and location details.</p></div>
+          <div class="city"><h3>Palmerston North</h3><p>Education and training providers might need a clear course list, a downloadable-style information layout and a straightforward enquiry process.</p></div>
+          <div class="city"><h3>Napier</h3><p>A small food or wine business may want appealing photography, a booking option for visits and an easy way to buy products online.</p></div>
+          <div class="city"><h3>Nelson</h3><p>Artists and makers often rely on a strong image gallery, an about section and a simple shop or enquiry form for commissions.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="sec alt" id="faq" aria-labelledby="h-faq">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="h-faq">Frequently Asked Questions</h2>
+          <p>Straight answers to the questions people ask most about website costs and this estimator.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary><h3>How much does a website cost in New Zealand?</h3></summary>
+            <p>It depends on the type of website, the number of pages, the design, the features and who prepares the content. This estimator covers builds from NZ$200 to NZ$3,000, and real quotes from developers can be lower or higher. Use the result as a starting point, then ask for written quotes that list exactly what is included.</p>
+          </details>
+          <details>
+            <summary><h3>What is the minimum price in this website cost calculator?</h3></summary>
+            <p>The minimum is NZ$200. If the calculated total ever falls below that, the calculator raises it to NZ$200. In practice, even the simplest combination of choices usually lands a little above this figure.</p>
+          </details>
+          <details>
+            <summary><h3>What is the maximum estimated website price?</h3></summary>
+            <p>The maximum is NZ$3,000. If your selections add up to more than that, the total is capped at NZ$3,000 and the result explains that a larger or more complex project may need a separate assessment.</p>
+          </details>
+          <details>
+            <summary><h3>Can I estimate the cost of a small business website?</h3></summary>
+            <p>Yes. Choose Business Website, pick a design style, select the features you need, and answer the project questions. A contact form is already included with this type, so you are not charged for it twice. Add extras such as a gallery, reviews or a map only if they will help your customers.</p>
+          </details>
+          <details>
+            <summary><h3>How much might an e-commerce website cost?</h3></summary>
+            <p>Choose Online Store to see a figure based on your choices. A product catalogue, payment setup and a contact form are already included with this type, and extras such as customer accounts, search or a larger page count raise the total. Payment provider fees, platform subscriptions and shipping tools are not part of the estimate, and the total is capped at NZ$3,000.</p>
+          </details>
+          <details>
+            <summary><h3>Can I calculate the cost without technical knowledge?</h3></summary>
+            <p>Yes. Every question uses plain language and most have a not-sure option. If you pick one, the calculator uses a sensible assumption, such as 6 to 10 pages when you are unsure of the page count, and tells you what it assumed.</p>
+          </details>
+          <details>
+            <summary><h3>What affects the price of a website?</h3></summary>
+            <p>In this calculator the main factors are the website type, the design style, the number of pages, the additional features you choose, whether you need help preparing content, and whether you want SEO setup. In real projects, custom functionality, outside integrations and ongoing maintenance also matter.</p>
+          </details>
+          <details>
+            <summary><h3>Are domain and hosting costs included in the estimate?</h3></summary>
+            <p>No. Domain registration, hosting, premium plugins, payment processing fees, third-party subscriptions, taxes such as GST and ongoing maintenance are separate and may be charged by other providers. You can say whether you already have a domain, but that answer does not change the price.</p>
+          </details>
+          <details>
+            <summary><h3>Does the estimate include SEO?</h3></summary>
+            <p>Only if you ask for it. Basic SEO covers foundational on-page elements such as page titles, meta descriptions and a sensible heading structure, and comprehensive assistance adds more work. SEO setup is shown as its own line in the breakdown. It does not guarantee any particular search ranking.</p>
+          </details>
+          <details>
+            <summary><h3>Can I change my selections after seeing my estimate?</h3></summary>
+            <p>Yes. Use Edit My Choices on the estimate, the Edit buttons on the summary step, or the progress bar to return to any earlier step. Your other answers are kept and the estimate updates straight away.</p>
+          </details>
+          <details>
+            <summary><h3>Is the website cost estimate a guaranteed quote?</h3></summary>
+            <p>No. It is an indicative figure produced by fixed rules built into this page. It is not a quote from a web design agency, and it is not based on a survey of what New Zealand providers charge. Always ask a developer for a written quote based on your actual requirements.</p>
+          </details>
+          <details>
+            <summary><h3>What should I prepare before building my website?</h3></summary>
+            <p>Be clear about the main purpose of the site and list the pages you need. Gather your text, photos and logo, note a few websites whose style you like, think about a domain name, and decide which features matter most at the start. Also set aside a budget for hosting, domain renewals and maintenance.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Main Website Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="assets/images/logo-white.png" alt="WEBSOL Digital Solutions">
+          </a>
+          <p class="footer-tagline">
+            Website design, web development and SEO for New Zealand businesses, with a transparent website cost calculator.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn linkedin" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.62 1.62 0 1 0 0-3.24 1.62 1.62 0 0 0 0 3.24m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn twitter" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn facebook" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="web-development.html">Web Development</a></li>
+            <li><a href="seo-services.html">SEO Services</a></li>
+            <li><a href="seo-services.html#local-seo">Local SEO</a></li>
+            <li><a href="index.html#estimator">Website Cost Calculator NZ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="https://blogs.websol.nz/">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Info -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>info@websol.nz</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+92 324 9098917</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Auckland, New Zealand • Serving Clients Worldwide</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <div>
+            © 2026 WEBSOL DIGITAL SOLUTIONS. All rights reserved.
+          </div>
+          <div class="footer-legal-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Services</a>
+            <a href="disclaimer.html">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="printArea" aria-hidden="true"></div>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://websol.nz/#website",
+        "url": "https://websol.nz/",
+        "name": "Websol Digital Solutions",
+        "alternateName": [
+          "WEBSOL Digital Solutions",
+          "Websol",
+          "WEBSOL"
+        ],
+        "publisher": {
+          "@id": "https://websol.nz/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://websol.nz/#organization",
+        "name": "Websol Digital Solutions",
+        "url": "https://websol.nz/",
+        "logo": "https://websol.nz/assets/images/logo.png",
+        "email": "info@websol.nz",
+        "telephone": "+923249098917",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Auckland",
+          "addressCountry": "NZ"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a website cost in New Zealand?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the type of website, the number of pages, the design, the features and who prepares the content. This estimator covers builds from NZ$200 to NZ$3,000, and real quotes from developers can be lower or higher. Use the result as a starting point, then ask for written quotes that list exactly what is included."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the minimum price in this website cost calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The minimum is NZ$200. If the calculated total ever falls below that, the calculator raises it to NZ$200. In practice, even the simplest combination of choices usually lands a little above this figure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the maximum estimated website price?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The maximum is NZ$3,000. If your selections add up to more than that, the total is capped at NZ$3,000 and the result explains that a larger or more complex project may need a separate assessment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I estimate the cost of a small business website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose Business Website, pick a design style, select the features you need, and answer the project questions. A contact form is already included with this type, so you are not charged for it twice. Add extras such as a gallery, reviews or a map only if they will help your customers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much might an e-commerce website cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Choose Online Store to see a figure based on your choices. A product catalogue, payment setup and a contact form are already included with this type, and extras such as customer accounts, search or a larger page count raise the total. Payment provider fees, platform subscriptions and shipping tools are not part of the estimate, and the total is capped at NZ$3,000."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I calculate the cost without technical knowledge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every question uses plain language and most have a not-sure option. If you pick one, the calculator uses a sensible assumption, such as 6 to 10 pages when you are unsure of the page count, and tells you what it assumed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What affects the price of a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In this calculator the main factors are the website type, the design style, the number of pages, the additional features you choose, whether you need help preparing content, and whether you want SEO setup. In real projects, custom functionality, outside integrations and ongoing maintenance also matter."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are domain and hosting costs included in the estimate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Domain registration, hosting, premium plugins, payment processing fees, third-party subscriptions, taxes such as GST and ongoing maintenance are separate and may be charged by other providers. You can say whether you already have a domain, but that answer does not change the price."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the estimate include SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if you ask for it. Basic SEO covers foundational on-page elements such as page titles, meta descriptions and a sensible heading structure, and comprehensive assistance adds more work. SEO setup is shown as its own line in the breakdown. It does not guarantee any particular search ranking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I change my selections after seeing my estimate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Use Edit My Choices on the estimate, the Edit buttons on the summary step, or the progress bar to return to any earlier step. Your other answers are kept and the estimate updates straight away."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the website cost estimate a guaranteed quote?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It is an indicative figure produced by fixed rules built into this page. It is not a quote from a web design agency, and it is not based on a survey of what New Zealand providers charge. Always ask a developer for a written quote based on your actual requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should I prepare before building my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Be clear about the main purpose of the site and list the pages you need. Gather your text, photos and logo, note a few websites whose style you like, think about a domain name, and decide which features matter most at the start. Also set aside a budget for hosting, domain renewals and maintenance."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Main Website Scripts (Navbar, Drawer, ScrollTop) -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Interactive Cost Calculator Script -->
+  <script>
+  (function () {
+  'use strict';
+
+  /*PRICING_START*/
+  var PRICING = {
+    type: {
+      business: { base: 300 }, store: { base: 700 }, blog: { base: 250 },
+      portfolio: { base: 250 }, booking: { base: 450 }, custom: { base: 800 },
+      notsure: { base: 300 }
+    },
+    design: { simple: 0, modern: 120, creative: 200, premium: 350, custom: 600 },
+    pages: { p5: 0, p10: 150, p20: 350, p20plus: 650, unsure: 150 },
+    content: { ready: 0, some: 90, help: 250 },
+    seo: { none: 0, basic: 80, full: 280 },
+    features: {
+      contact: 40, booking: 180, payments: 200, catalogue: 150, reviews: 60,
+      gallery: 70, blog: 90, accounts: 220, chat: 50, maps: 30, search: 80, seo: 0
+    },
+    included: {
+      business: ['contact'], store: ['catalogue', 'payments', 'contact'], blog: ['blog'],
+      portfolio: ['gallery', 'contact'], booking: ['booking', 'contact'], custom: [],
+      notsure: ['contact']
+    },
+    min: 200,
+    max: 3000
+  };
+  function roundTo10(n) { return Math.round(n / 10) * 10; }
+  function calcEstimate(s) {
+    s = s || {};
+    var P = PRICING;
+    var feats = s.features || [];
+    var inc = P.included[s.type] || [];
+    var base = P.type[s.type] ? P.type[s.type].base : 0;
+    var featCost = 0, paid = [], free = [];
+    feats.forEach(function (f) {
+      if (!Object.prototype.hasOwnProperty.call(P.features, f)) { return; }
+      if (inc.indexOf(f) > -1) { free.push(f); } else { paid.push(f); featCost += P.features[f]; }
+    });
+    var seoLevel = 'none';
+    if (s.seo === 'full') { seoLevel = 'full'; }
+    else if (s.seo === 'basic' || feats.indexOf('seo') > -1) { seoLevel = 'basic'; }
+    var raw = {
+      design: P.design[s.design] || 0,
+      development: base + (P.pages[s.pages] || 0),
+      features: featCost,
+      content: P.content[s.content] || 0,
+      seo: P.seo[seoLevel]
+    };
+    var keys = ['design', 'development', 'features', 'content', 'seo'];
+    var rawTotal = 0;
+    keys.forEach(function (k) { rawTotal += raw[k]; });
+    var capped = rawTotal > P.max, floored = rawTotal < P.min;
+    var clamped = Math.min(Math.max(rawTotal, P.min), P.max);
+    var total = Math.min(Math.max(roundTo10(clamped), P.min), P.max);
+    var parts = {}, used = 0, big = 'development';
+    keys.forEach(function (k) { parts[k] = 0; });
+    if (rawTotal > 0) {
+      var f = total / rawTotal;
+      keys.forEach(function (k) {
+        parts[k] = Math.floor(raw[k] * f + 1e-9);
+        used += parts[k];
+        if (raw[k] > raw[big]) { big = k; }
+      });
+    }
+    parts[big] += total - used;
+    var low = Math.max(P.min, roundTo10(total * 0.9));
+    var high = Math.min(P.max, roundTo10(total * 1.12));
+    if (low > total) { low = total; }
+    if (high < total) { high = total; }
+    return { total: total, low: low, high: high, parts: parts, raw: raw, rawTotal: rawTotal,
+      capped: capped, floored: floored, seoLevel: seoLevel, paid: paid, free: free, included: inc };
+  }
+  /*PRICING_END*/
+
+  var ICONS = {
+    briefcase: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/>',
+    cart: '<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.5 12h11l2-8H6"/>',
+    doc: '<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/>',
+    image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 16l-5-5-8 9"/>',
+    calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+    sliders: '<path d="M4 6h8M18 6h2M4 12h2M12 12h8M4 18h10M20 18h0"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/>',
+    help: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01"/>',
+    mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+    card: '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/>',
+    box: '<path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/>',
+    star: '<path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/>',
+    chat: '<path d="M4 5h16v11H9l-5 4z"/>',
+    pin: '<path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+    search: '<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>',
+    user: '<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/>',
+    trend: '<path d="M3 17l6-6 4 4 8-8M15 7h6v6"/>',
+    clean: '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 9v11"/>',
+    spark: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/>',
+    palette: '<path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 1.5-2s0-2 1.5-2h2a3 3 0 0 0 3-3c0-6-4-11-8-11z"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="11" r="1"/>',
+    gem: '<path d="M6 4h12l3 5-9 11L3 9z"/><path d="M3 9h18M9 4l-2 5 5 11 5-11-2-5"/>',
+    pen: '<path d="M4 20l1-4L16 5l3 3L8 19z"/>'
+  };
+
+  var TYPES = [
+    { id: 'business', title: 'Business Website', desc: 'Introduce your business, explain your services, and help customers get in touch.', icon: 'briefcase' },
+    { id: 'store', title: 'Online Store', desc: 'Display products and allow customers to shop online.', icon: 'cart' },
+    { id: 'blog', title: 'Blog or Information Website', desc: 'Publish articles, guides, news, or helpful information.', icon: 'doc' },
+    { id: 'portfolio', title: 'Portfolio Website', desc: 'Showcase your work, projects, experience, and achievements.', icon: 'image' },
+    { id: 'booking', title: 'Booking Website', desc: 'Allow visitors to request appointments or book services.', icon: 'calendar' },
+    { id: 'custom', title: 'Custom Website', desc: 'Build a website around a more specific idea or business requirement.', icon: 'sliders' },
+    { id: 'notsure', title: 'Not Sure', desc: 'Not certain yet? Pick this and get simple guidance on a good starting point.', icon: 'help' }
+  ];
+  var DESIGNS = [
+    { id: 'simple', title: 'Simple and Clean', desc: 'A straightforward layout with clear information and easy navigation.', icon: 'clean', tag: 'Lowest design cost' },
+    { id: 'modern', title: 'Modern and Professional', desc: 'A polished design suitable for businesses and professional services.', icon: 'spark', tag: 'Low design cost' },
+    { id: 'creative', title: 'Creative and Colourful', desc: 'A distinctive visual style for brands, portfolios, and creative projects.', icon: 'palette', tag: 'Medium design cost' },
+    { id: 'premium', title: 'Premium and Elegant', desc: 'A refined look with carefully selected typography, spacing, and imagery.', icon: 'gem', tag: 'Higher design cost' },
+    { id: 'custom', title: 'Custom Design', desc: 'A more tailored design based on your preferences.', icon: 'pen', tag: 'Highest design cost' }
+  ];
+  var FEATURES = [
+    { id: 'contact', title: 'Contact Form', desc: 'Help visitors send enquiries.', icon: 'mail' },
+    { id: 'booking', title: 'Online Booking', desc: 'Allow visitors to request appointments or reserve services.', icon: 'calendar', ext: true },
+    { id: 'payments', title: 'Online Payments', desc: 'Accept payments through an appropriate payment provider.', icon: 'card', ext: true },
+    { id: 'catalogue', title: 'Product Catalogue', desc: 'Display products with images and descriptions.', icon: 'box' },
+    { id: 'reviews', title: 'Customer Reviews', desc: 'Show testimonials and customer feedback.', icon: 'star' },
+    { id: 'gallery', title: 'Image Gallery', desc: 'Present photographs, projects, or completed work.', icon: 'image' },
+    { id: 'blog', title: 'Blog or Article Section', desc: 'Publish useful written content.', icon: 'doc' },
+    { id: 'accounts', title: 'Customer Accounts', desc: 'Allow users to register and access personalised features.', icon: 'user', ext: true },
+    { id: 'chat', title: 'Live Chat', desc: 'Offer a way for visitors to communicate with the business.', icon: 'chat', ext: true },
+    { id: 'maps', title: 'Google Maps Integration', desc: 'Help visitors find a business location.', icon: 'pin', ext: true },
+    { id: 'search', title: 'Search Function', desc: 'Help visitors find content or products.', icon: 'search' },
+    { id: 'seo', title: 'Basic SEO Setup', desc: 'Include foundational on-page SEO elements such as page titles, meta descriptions, and a sensible heading structure.', icon: 'trend', seo: true }
+  ];
+  var QUESTIONS = [
+    { name: 'pages', legend: 'How Many Pages Do You Need?', req: true,
+      help: 'A page is a separate screen such as Home, About, Services or Contact. Many small business websites use 5 to 10. If you are not sure, we assume 6 to 10 pages.',
+      opts: [['p5', '1 to 5 pages'], ['p10', '6 to 10 pages'], ['p20', '11 to 20 pages'], ['p20plus', 'More than 20 pages'], ['unsure', "I'm not sure"]] },
+    { name: 'domain', legend: 'Do You Already Have a Domain Name?',
+      help: 'Your domain is your web address. Registering one is a separate cost, so this answer does not change the estimate.',
+      opts: [['yes', 'Yes'], ['no', 'No'], ['unsure', "I'm not sure"]] },
+    { name: 'content', legend: 'Is Your Website Content Ready?', req: true,
+      help: 'Content means the text, photos and logo that go on your pages. Preparing it takes time, so it can affect the cost.',
+      opts: [['ready', 'Yes, I have my content ready.'], ['some', 'I have some content.'], ['help', 'I need help preparing my content.']] },
+    { name: 'seo', legend: 'Do You Need Help With Search Engine Optimisation?', req: true,
+      help: 'SEO helps search engines understand your pages. Basic SEO covers titles, descriptions and headings. Choose "Not sure yet" if you would rather decide later.',
+      opts: [['basic', 'Basic SEO'], ['full', 'More comprehensive SEO assistance'], ['unsure', 'Not sure yet']] },
+    { name: 'timeline', legend: 'How Soon Would You Like Your Website?',
+      help: 'This is for planning only. The estimator does not add rush charges.',
+      opts: [['asap', 'As soon as reasonably possible'], ['weeks', 'Within a few weeks'], ['flexible', 'I am flexible']] }
+  ];
+  var HELPERS = [
+    ['I want to sell products online', 'store'], ['I want customers to contact me', 'business'],
+    ['I want people to book appointments', 'booking'], ['I want to share articles or guides', 'blog'],
+    ['I want to show my work', 'portfolio'], ['Something more specific', 'custom']
+  ];
+  var STEPS = ['Website Type', 'Design', 'Features', 'Details', 'Summary', 'Estimate'];
+  var EXAMPLE = [['yes', 'Yes, I have an example.'], ['no', 'No, help me choose.']];
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function esc(t) { return String(t).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function money(n) { return 'NZ$' + Number(n).toLocaleString('en-NZ'); }
+  function find(list, id) { for (var i = 0; i < list.length; i++) { if (list[i].id === id) { return list[i]; } } return null; }
+  function qLabel(name, val) { var q = QUESTIONS.filter(function (x) { return x.name === name; })[0]; if (!q) { return ''; } for (var i = 0; i < q.opts.length; i++) { if (q.opts[i][0] === val) { return q.opts[i][1]; } } return ''; }
+  function icon(n) { return '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' + (ICONS[n] || '') + '</svg>'; }
+  function niceList(a) { if (a.length < 2) { return a.join(''); } return a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1]; }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var form = $('#calcForm'), current = 1;
+
+  /* render options */
+  function card(kind, name, it, extra) {
+    return '<label class="opt"><input type="' + kind + '" name="' + name + '" value="' + it.id + '"' + (extra || '') + '>' +
+      '<span class="opt-body"><span class="opt-ic">' + icon(it.icon) + '</span><span class="opt-t">' + it.title + '</span>' +
+      '<span class="opt-d">' + it.desc + '</span>' +
+      (it.tag ? '<span class="opt-tag">' + it.tag + '</span>' : '') +
+      (it.ext ? '<span class="opt-tag">Third-party fees may apply</span>' : '') +
+      (it.seo ? '<span class="opt-tag">Priced under SEO setup</span>' : '') +
+      (kind === 'checkbox' ? '<span class="opt-tag inc" hidden>Included with your website type</span>' : '') +
+      '</span></label>';
+  }
+  $('#typeList').insertAdjacentHTML('beforeend', TYPES.map(function (t) { return card('radio', 'type', t); }).join(''));
+  $('#designList').insertAdjacentHTML('beforeend', DESIGNS.map(function (d) { return card('radio', 'design', d); }).join(''));
+  $('#featureList').insertAdjacentHTML('beforeend', FEATURES.map(function (t) { return card('checkbox', 'feature', t, ' data-user="0"'); }).join(''));
+  function pills(name, opts) {
+    return opts.map(function (o) { return '<label class="pill"><input type="radio" name="' + name + '" value="' + o[0] + '"><span>' + esc(o[1]) + '</span></label>'; }).join('');
+  }
+  $('#exampleList').innerHTML = pills('example', EXAMPLE);
+  $('#detailQs').innerHTML = QUESTIONS.map(function (q) {
+    return '<fieldset class="q"><legend>' + q.legend + (q.req ? '' : ' <span style="font-weight:400;color:var(--muted)">(optional)</span>') + '</legend><p class="help">' + q.help + '</p><div class="pills">' + pills(q.name, q.opts) + '</div></fieldset>';
+  }).join('');
+  $('#helperBtns').innerHTML = HELPERS.map(function (h) { return '<button type="button" data-helper="' + h[1] + '">' + h[0] + '</button>'; }).join('');
+  $('#progress').innerHTML = STEPS.map(function (s, i) {
+    return '<li><button type="button" class="pstep" data-pstep="' + (i + 1) + '"><span class="n">' + (i + 1) + '</span><span class="lbl">' + s + '</span></button></li>';
+  }).join('');
+
+  /* state */
+  function getState() {
+    var fd = new FormData(form), s = {};
+    ['type', 'design', 'example', 'pages', 'domain', 'content', 'seo', 'timeline'].forEach(function (k) { s[k] = fd.get(k) || ''; });
+    s.features = fd.getAll('feature');
+    return s;
+  }
+  function syncIncluded() {
+    var type = ($('input[name="type"]:checked') || {}).value;
+    var inc = PRICING.included[type] || [];
+    $$('input[name="feature"]').forEach(function (cb) {
+      var isInc = inc.indexOf(cb.value) > -1;
+      cb.disabled = isInc;
+      cb.checked = isInc ? true : cb.getAttribute('data-user') === '1';
+      var lab = cb.closest('.opt');
+      lab.classList.toggle('is-included', isInc);
+      $('.inc', lab).hidden = !isInc;
+    });
+  }
+  function updateLive() {
+    var s = getState(), box = $('#liveBox');
+    if (!s.type) { box.textContent = 'Choose a website type to see a live estimate'; return; }
+    var e = calcEstimate(s);
+    box.innerHTML = 'Estimate so far: <b>' + money(e.total) + '</b>';
+  }
+
+  /* navigation */
+  function validate(step, s) {
+    var m = [];
+    if (step === 1 && !s.type) { m.push('Please choose a website type to continue. If you are unsure, pick Not Sure and use the quick guide.'); }
+    if (step === 2 && !s.design) { m.push('Please choose a design style to continue. Custom Design is there if nothing else fits.'); }
+    if (step === 4) {
+      var miss = [];
+      if (!s.pages) { miss.push('the number of pages'); }
+      if (!s.content) { miss.push('your content'); }
+      if (!s.seo) { miss.push('SEO help'); }
+      if (miss.length) { m.push('Almost there. Please answer the questions about ' + niceList(miss) + ' so the estimate is fair. The "not sure" options are fine.'); }
+    }
+    return m;
+  }
+  function showMsg(t) { var el = $('#stepMsg'); if (t) { el.textContent = t; el.hidden = false; } else { el.textContent = ''; el.hidden = true; } }
+  function goTo(n, silent) {
+    current = Math.max(1, Math.min(6, n));
+    $$('.step').forEach(function (p) { p.hidden = Number(p.getAttribute('data-step')) !== current; });
+    $$('.pstep').forEach(function (b) {
+      var i = Number(b.getAttribute('data-pstep'));
+      b.classList.toggle('done', i < current);
+      if (i === current) { b.setAttribute('aria-current', 'step'); } else { b.removeAttribute('aria-current'); }
+    });
+    $('#pfill').style.width = ((current - 1) / 5 * 100) + '%';
+    $('#stepLine').textContent = 'Step ' + current + ' of 6: ' + STEPS[current - 1];
+    $('#backBtn').style.visibility = current === 1 ? 'hidden' : 'visible';
+    var nb = $('#nextBtn');
+    nb.hidden = current === 6;
+    nb.textContent = current === 5 ? 'See My Estimate' : 'Next';
+    $('#liveBox').hidden = current === 6;
+    if (current === 5) { renderSummary(); }
+    if (current === 6) { renderEstimate(); }
+    showMsg('');
+    if (!silent) {
+      $('#estimator').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      var h = $('#t' + current);
+      if (h) { h.focus({ preventScroll: true }); }
+    }
+  }
+  function tryGo(target) {
+    var s = getState();
+    if (target <= current) { goTo(target); return; }
+    for (var i = current; i < target; i++) {
+      var errs = validate(i, s);
+      if (errs.length) { goTo(i); showMsg(errs[0]); return; }
+    }
+    goTo(target);
+  }
+
+  /* summary and estimate */
+  function featureNames(ids) { return ids.map(function (id) { return find(FEATURES, id).title; }); }
+  function summaryRows(s) {
+    var e = calcEstimate(s), t = find(TYPES, s.type), d = find(DESIGNS, s.design);
+    var chosen = featureNames(e.paid);
+    var incl = featureNames(e.included);
+    var feat = (chosen.length ? chosen.join(', ') : 'No extra features selected') + (incl.length ? '. Included with your type: ' + incl.join(', ') : '');
+    var pagesNote = s.pages === 'unsure' ? ' (priced as 6 to 10 pages)' : '';
+    return [
+      ['Website type', t ? t.title + (t.id === 'notsure' ? ' (priced as a Business Website)' : '') : 'Not chosen', 1],
+      ['Preferred design', (d ? d.title : 'Not chosen') + (s.example ? '. Design example: ' + (s.example === 'yes' ? 'Yes, I have one' : 'No, I would like help choosing') : ''), 2],
+      ['Selected features', feat, 3],
+      ['Number of pages', (qLabel('pages', s.pages) || 'Not answered') + pagesNote, 4],
+      ['Content requirements', qLabel('content', s.content) || 'Not answered', 4],
+      ['SEO preferences', (qLabel('seo', s.seo) || 'Not answered') + (s.features.indexOf('seo') > -1 && s.seo !== 'full' ? '. Basic SEO Setup feature selected' : ''), 4],
+      ['Domain status', qLabel('domain', s.domain) || 'Not specified', 4],
+      ['Desired timeline', qLabel('timeline', s.timeline) || 'Not specified', 4]
+    ];
+  }
+  function renderSummary() {
+    var s = getState();
+    $('#summaryList').innerHTML = summaryRows(s).map(function (r) {
+      return '<li><div><div class="k">' + r[0] + '</div><div class="v">' + esc(r[1]) + '</div></div><button type="button" data-goto="' + r[2] + '" aria-label="Edit ' + r[0].toLowerCase() + '">Edit</button></li>';
+    }).join('');
+    var e = calcEstimate(s);
+    $('#prelim').innerHTML = '<span>Preliminary price range</span><strong>' + money(e.low) + ' to ' + money(e.high) + '</strong><p>This range is indicative and depends on the final project scope. It is not a quote. The full breakdown comes next.</p>';
+  }
+  var PART_LABELS = [
+    ['design', 'Design'], ['development', 'Development'], ['features', 'Additional features'],
+    ['content', 'Content preparation'], ['seo', 'SEO setup']
+  ];
+  function partNote(key) {
+    return { design: 'Included, no extra design charge', features: 'None selected, optional', content: 'Not needed', seo: 'Not included, optional', development: '' }[key];
+  }
+  function reportBody(s, e) {
+    var rows = summaryRows(s);
+    var date = new Date().toLocaleDateString('en-NZ', { day: 'numeric', month: 'long', year: 'numeric' });
+    var h = '<h1>Website Cost Estimate (NZD)</h1><p>Prepared on ' + esc(date) + ' using Website Price Estimator NZ.</p>';
+    h += '<h2>Estimated price: ' + money(e.total) + '</h2><p>Likely range: ' + money(e.low) + ' to ' + money(e.high) + '</p>';
+    if (e.capped) { h += '<p>The calculated total reached the NZ$3,000 limit of this estimator. Complex projects may need a separate assessment.</p>'; }
+    h += '<h3>Your requirements</h3><table>' + rows.map(function (r) { return '<tr><th>' + esc(r[0]) + '</th><td>' + esc(r[1]) + '</td></tr>'; }).join('') + '</table>';
+    h += '<h3>Cost breakdown</h3><table>' + PART_LABELS.map(function (p) {
+      var v = e.parts[p[0]];
+      return '<tr><th>' + p[1] + '</th><td>' + (v > 0 ? money(v) : esc(partNote(p[0]))) + '</td></tr>';
+    }).join('') + '<tr><th>Total estimate</th><td><strong>' + money(e.total) + '</strong></td></tr></table>';
+    h += '<h3>Important notes</h3><ul><li>This is an indicative estimate, not a quote.</li><li>Domain registration, hosting, premium plugins, payment processing, third-party subscriptions, taxes such as GST, and ongoing maintenance may cost extra.</li><li>Not every project needs every service.</li><li>The estimate is limited to the range NZ$200 to NZ$3,000.</li></ul>';
+    return h;
+  }
+  function renderEstimate() {
+    var s = getState(), e = calcEstimate(s);
+    var h = '<div class="result"><div class="result-card"><span class="lab">Estimated website cost</span><span class="big">' + money(e.total) + '</span><span class="rng">Likely range: ' + money(e.low) + ' to ' + money(e.high) + '</span>';
+    h += '<p class="note">' + (e.capped ? 'Your selections add up to more than the NZ$3,000 this estimator can show, so the total is capped at NZ$3,000. A project this size may need a separate assessment.' : (e.floored ? 'The calculated total was below the NZ$200 minimum, so the minimum is shown.' : 'Rounded to the nearest NZ$10. Real quotes vary by provider and project details.')) + '</p></div></div>';
+    h += '<table class="bd"><caption>Estimated cost breakdown</caption><tbody>';
+    PART_LABELS.forEach(function (p) {
+      var v = e.parts[p[0]];
+      h += '<tr><th scope="row">' + p[1] + '</th>' + (v > 0 ? '<td>' + money(v) + '</td>' : '<td class="opt-note">' + esc(partNote(p[0])) + '</td>') + '</tr>';
+    });
+    h += '</tbody><tfoot><tr><th scope="row">Total estimate</th><td>' + money(e.total) + '</td></tr></tfoot></table>';
+    var incl = featureNames(e.included);
+    if (incl.length) { h += '<p class="callout">Already included with your website type and not charged again: ' + esc(incl.join(', ')) + '.</p>'; }
+    h += '<ul class="dis"><li>This is an indicative estimate, not a quote or a guaranteed price.</li><li>Domain registration, hosting, premium plugins, payment processing, third-party subscriptions, taxes such as GST, and ongoing maintenance may incur separate charges.</li><li>Not every project needs every service, so items you did not select are shown as optional or not included.</li></ul>';
+    h += '<div class="actions"><button type="button" class="btn btn-ghost" id="editBtn">Edit My Choices</button><button type="button" class="btn btn-primary" id="dlBtn">Download My Estimate</button><button type="button" class="btn btn-ghost" id="printBtn">Print My Estimate</button></div><p class="status" id="dlStatus" role="status"></p>';
+    $('#estimateBody').innerHTML = h;
+  }
+  function download() {
+    var s = getState(), e = calcEstimate(s), st = $('#dlStatus');
+    var css = 'body{font-family:Arial,Helvetica,sans-serif;max-width:760px;margin:30px auto;padding:0 18px;color:#0F172A;line-height:1.5}h1{color:#0B132B}h2{color:#0066FF}table{width:100%;border-collapse:collapse;margin-bottom:18px}th,td{text-align:left;padding:8px;border-bottom:1px solid #E2E8F0;vertical-align:top}th{width:38%;color:#0B132B}@media print{.np{display:none}}';
+    var html = '<!DOCTYPE html><html lang="en-NZ"><head><meta charset="utf-8"><title>Website Cost Estimate NZ</title><style>' + css + '</style></head><body>' + reportBody(s, e) + '<p class="np"><button onclick="window.print()">Print this estimate</button></p></body></html>';
+    try {
+      var blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      var url = URL.createObjectURL(blob), a = document.createElement('a');
+      a.href = url; a.download = 'website-cost-estimate-nz.html';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1500);
+      st.textContent = 'Your estimate was saved as an HTML file. Open it in your browser to read it, or print it or save it as a PDF from there.';
+    } catch (err) {
+      st.textContent = 'Downloading is not available in this browser, so the print window has opened instead.';
+      printReport();
+    }
+  }
+  function printReport() {
+    var s = getState(), e = calcEstimate(s);
+    $('#printArea').innerHTML = reportBody(s, e);
+    window.print();
+  }
+  window.addEventListener('afterprint', function () { $('#printArea').innerHTML = ''; });
+  function resetAll() {
+    form.reset();
+    $$('input[name="feature"]').forEach(function (cb) { cb.setAttribute('data-user', '0'); });
+    syncIncluded(); updateLive(); $('#typeHelper').hidden = true;
+    goTo(1);
+  }
+
+  /* events */
+  form.addEventListener('change', function (ev) {
+    var t = ev.target;
+    if (t.name === 'feature') { t.setAttribute('data-user', t.checked ? '1' : '0'); }
+    if (t.name === 'type') { $('#typeHelper').hidden = t.value !== 'notsure'; }
+    syncIncluded(); updateLive(); showMsg('');
+  });
+  $('#nextBtn').addEventListener('click', function () { tryGo(current + 1); });
+  $('#backBtn').addEventListener('click', function () { goTo(current - 1); });
+  $('#resetBtn').addEventListener('click', resetAll);
+  document.addEventListener('click', function (ev) {
+    var el = ev.target.closest ? ev.target.closest('button, a') : null;
+    if (!el) { return; }
+    if (el.hasAttribute('data-pstep')) { tryGo(Number(el.getAttribute('data-pstep'))); }
+    else if (el.hasAttribute('data-goto')) { goTo(Number(el.getAttribute('data-goto'))); }
+    else if (el.hasAttribute('data-helper')) {
+      var r = $('input[name="type"][value="' + el.getAttribute('data-helper') + '"]');
+      if (r) { r.checked = true; $('#typeHelper').hidden = true; syncIncluded(); updateLive(); showMsg(''); }
+    }
+    else if (el.id === 'editBtn') { goTo(1); }
+    else if (el.id === 'dlBtn') { download(); }
+    else if (el.id === 'printBtn') { printReport(); }
+    else if (el.id === 'againBtn') { resetAll(); }
+    else if (el.id === 'ctaStart') {
+      ev.preventDefault();
+      $('#estimator').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      $('#calcTitle').focus({ preventScroll: true });
+    }
+  });
+
+  /* methodology tables, built from the same numbers the calculator uses */
+  function tbl(cap, rows) {
+    return '<div class="tw"><table><caption>' + cap + '</caption><tbody>' + rows.map(function (r) { return '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td>' + (r[2] !== undefined ? '<td>' + r[2] + '</td>' : '') + '</tr>'; }).join('') + '</tbody></table></div>';
+  }
+  function renderModel() {
+    var P = PRICING, h = '';
+    h += tbl('Starting amount by website type', TYPES.map(function (t) { return [t.title, money(P.type[t.id].base), t.id === 'notsure' ? 'Priced as a Business Website' : '']; }));
+    h += tbl('Design style', DESIGNS.map(function (d) { return [d.title, P.design[d.id] ? '+ ' + money(P.design[d.id]) : 'No extra charge']; }));
+    h += tbl('Number of pages', QUESTIONS[0].opts.map(function (o) { return [o[1], P.pages[o[0]] ? '+ ' + money(P.pages[o[0]]) : 'No extra charge']; }));
+    h += tbl('Content preparation', QUESTIONS[2].opts.map(function (o) { return [o[1], P.content[o[0]] ? '+ ' + money(P.content[o[0]]) : 'No extra charge']; }));
+    h += tbl('SEO setup', [['Basic SEO, or the Basic SEO Setup feature', '+ ' + money(P.seo.basic)], ['More comprehensive SEO assistance', '+ ' + money(P.seo.full)], ['Not sure yet, with no SEO feature selected', 'Not included']]);
+    h += tbl('Additional features (not charged if already included with your website type)', FEATURES.filter(function (f) { return !f.seo; }).map(function (f) {
+      var inWhich = TYPES.filter(function (t) { return P.included[t.id].indexOf(f.id) > -1 && t.id !== 'notsure'; }).map(function (t) { return t.title; });
+      return [f.title, '+ ' + money(P.features[f.id]), inWhich.length ? 'Included with: ' + inWhich.join(', ') : ''];
+    }));
+    $('#modelTables').innerHTML = h;
+  }
+
+  /* 3D hero tilt */
+  (function () {
+    var scene = $('#scene'), stack = $('#stack');
+    if (!scene || !stack || reduce) { return; }
+    scene.addEventListener('pointermove', function (ev) {
+      var r = scene.getBoundingClientRect();
+      var x = ((ev.clientX - r.left) / r.width - 0.5) * 2, y = ((ev.clientY - r.top) / r.height - 0.5) * 2;
+      stack.style.setProperty('--ry', x.toFixed(3));
+      stack.style.setProperty('--rx', y.toFixed(3));
+    });
+    scene.addEventListener('pointerleave', function () { stack.style.setProperty('--ry', 0); stack.style.setProperty('--rx', 0); });
+  })();
+
+  renderModel();
+  syncIncluded();
+  updateLive();
+  goTo(1, true);
+  })();
+  </script>
+</body>
+</html>
