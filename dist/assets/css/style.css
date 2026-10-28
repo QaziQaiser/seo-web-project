@@ -1243,6 +1243,16 @@ textarea.form-control {
   box-shadow: 0 6px 14px rgba(214, 36, 159, 0.45);
 }
 
+.social-icon-btn.pinterest {
+  background: #E60023;
+}
+
+.social-icon-btn.pinterest:hover {
+  background: #ad081b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(230, 0, 35, 0.45);
+}
+
 .social-icon-btn.github {
   background: #24292E;
 }
