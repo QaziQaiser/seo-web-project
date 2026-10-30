@@ -70,8 +70,6 @@ function highlightActiveNav() {
     const href = link.getAttribute('href');
     if (href === currentPath || (currentPath === '' && href === 'index.html')) {
       link.classList.add('active');
-    } else if (currentPath.includes('blog') && href === 'blog.html') {
-      link.classList.add('active');
     } else {
       link.classList.remove('active');
     }
@@ -163,7 +161,7 @@ function showToast(message, type = 'success') {
 const RECIPIENT_EMAIL = 'websol1stranking@gmail.com';
 
 function initForms() {
-  // Contact & Lead Forms (contact.html, web-development.html, seo-services.html)
+  // Contact & Lead Forms (contact.html, web-development.html, local-seo-services-new-zealand.html)
   const contactForms = document.querySelectorAll('#contactPageForm, #sidebarQuoteForm');
   contactForms.forEach(form => {
     form.addEventListener('submit', async (e) => {

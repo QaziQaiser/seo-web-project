@@ -51,17 +51,9 @@
   <!-- Official Blog Subdomain -->
   <url>
     <loc>https://blogs.websol.nz/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <!-- Blog Article -->
-  <url>
-    <loc>https://websol.nz/blog-post.html</loc>
-    <lastmod>2026-10-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 
   <!-- Legal: Privacy Policy -->

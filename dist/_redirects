@@ -1,2 +1,6 @@
-/seo-services /local-seo-services-new-zealand 301
+/seo-services /local-seo-services-new-zealand.html 301
 /seo-services.html /local-seo-services-new-zealand.html 301
+/blog https://blogs.websol.nz/ 301
+/blog.html https://blogs.websol.nz/ 301
+/blog-post.html https://blogs.websol.nz/ 301
+/blog/* https://blogs.websol.nz/ 301
