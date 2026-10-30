@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg_libaaso" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#260B1C" />
+      <stop offset="100%" stop-color="#130B1C" />
+    </linearGradient>
+    <linearGradient id="glow_libaaso" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0.8" />
+    </linearGradient>
+    <pattern id="grid_libaaso" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg_libaaso)" />
+  <rect width="800" height="500" fill="url(#grid_libaaso)" />
+
+  <!-- Ambient Glow Circles -->
+  <circle cx="680" cy="120" r="220" fill="#EC4899" opacity="0.18" />
+  <circle cx="140" cy="380" r="180" fill="#F43F5E" opacity="0.12" />
+
+  <!-- Browser Header Bar -->
+  <rect x="0" y="0" width="800" height="46" fill="#070B16" />
+  <line x1="0" y1="46" x2="800" y2="46" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <circle cx="24" cy="23" r="6" fill="#EF4444" />
+  <circle cx="44" cy="23" r="6" fill="#F59E0B" />
+  <circle cx="64" cy="23" r="6" fill="#10B981" />
+
+  <!-- Address Bar -->
+  <rect x="110" y="10" width="420" height="26" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+  <text x="130" y="27" fill="rgba(255,255,255,0.5)" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">https://libaaso.pk</text>
+
+  <!-- Live Status Pill in Header -->
+  <rect x="690" y="12" width="86" height="22" rx="11" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.4)" stroke-width="1" />
+  <circle cx="704" cy="23" r="3.5" fill="#10B981" />
+  <text x="714" y="27" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">ONLINE</text>
+
+  <!-- Card Graphic Center Container -->
+  <g transform="translate(50, 85)">
+    <!-- Mockup Inner Card -->
+    <rect x="0" y="0" width="700" height="350" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+
+    <!-- Top Accent Bar -->
+    <rect x="0" y="0" width="700" height="4" rx="2" fill="url(#glow_libaaso)" />
+
+    <!-- Project Icon Badge -->
+    <rect x="40" y="40" width="70" height="70" rx="18" fill="rgba(255,255,255,0.05)" stroke="#EC4899" stroke-width="1.5" />
+    <text x="75" y="85" fill="#FFFFFF" font-size="32" text-anchor="middle">🛍️</text>
+
+    <!-- Project Title & Subtitle -->
+    <text x="130" y="68" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">Libaaso</text>
+    <text x="130" y="98" fill="#F43F5E" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">Designer Fashion Store</text>
+
+    <!-- Mock UI Elements (Mini Dashboard) -->
+    <g transform="translate(40, 150)">
+      <!-- UI Box 1: Core Stat -->
+      <rect x="0" y="0" width="220" height="130" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+      <text x="20" y="35" fill="rgba(255,255,255,0.5)" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">KEY OUTCOME</text>
+      <text x="20" y="72" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700">95+ Speed Score</text>
+      <rect x="20" y="94" width="120" height="8" rx="4" fill="#EC4899" opacity="0.6" />
+
+      <!-- UI Box 2: Visual Wireframe Lines -->
+      <rect x="240" y="0" width="380" height="130" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" />
+      <rect x="260" y="25" width="140" height="14" rx="4" fill="rgba(255,255,255,0.25)" />
+      <rect x="260" y="50" width="280" height="8" rx="4" fill="rgba(255,255,255,0.1)" />
+      <rect x="260" y="66" width="240" height="8" rx="4" fill="rgba(255,255,255,0.1)" />
+
+      <!-- Interactive Button Mockup -->
+      <rect x="260" y="90" width="150" height="26" rx="6" fill="url(#glow_libaaso)" />
+      <text x="335" y="107" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">EXPLORE LIVE →</text>
+    </g>
+  </g>
+</svg>

@@ -1457,7 +1457,7 @@ textarea.form-control {
   border-radius: var(--radius-lg);
   border: 1.5px solid var(--border-color);
   box-shadow: var(--shadow-card);
-  padding: 28px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   transition: all var(--transition-normal);
@@ -1466,9 +1466,82 @@ textarea.form-control {
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   border-color: var(--primary);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: 0 16px 36px rgba(0, 102, 255, 0.12);
+}
+
+/* Card Image Wrapper */
+.project-card-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--navy);
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-card-image-wrap img {
+  transform: scale(1.05);
+}
+
+/* Category Pill Overlay on Image */
+.project-tag-overlay {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(11, 19, 43, 0.82);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.project-tag-overlay::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+.project-card[data-category="shopify"] .project-tag-overlay::before {
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.project-card[data-category="wordpress"] .project-tag-overlay::before {
+  background: #38BDF8;
+  box-shadow: 0 0 8px #38BDF8;
+}
+
+/* Card Body Content */
+.project-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-tag {
@@ -1485,13 +1558,15 @@ textarea.form-control {
   width: fit-content;
 }
 
-.project-card h3 {
+.project-card h3,
+.project-card-body h3 {
   font-size: 1.35rem;
   margin-bottom: 10px;
   color: var(--slate-900);
 }
 
-.project-card p {
+.project-card p,
+.project-card-body p {
   font-size: 0.95rem;
   color: var(--slate-600);
   margin-bottom: 16px;

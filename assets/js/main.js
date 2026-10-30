@@ -161,7 +161,7 @@ function showToast(message, type = 'success') {
 const RECIPIENT_EMAIL = 'websol1stranking@gmail.com';
 
 function initForms() {
-  // Contact & Lead Forms (contact.html, web-development.html, local-seo-services-new-zealand.html)
+  // Contact & Lead Forms (contact.html, web-development-projects.html, local-seo-services-new-zealand.html)
   const contactForms = document.querySelectorAll('#contactPageForm, #sidebarQuoteForm');
   contactForms.forEach(form => {
     form.addEventListener('submit', async (e) => {
