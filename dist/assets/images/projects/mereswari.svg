@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg_mereswari" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080E1E" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="glow_mereswari" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BE185D" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0.85" />
+    </linearGradient>
+    <pattern id="grid_mereswari" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg_mereswari)" />
+  <rect width="800" height="500" fill="url(#grid_mereswari)" />
+
+  <!-- Ambient Glow Circles -->
+  <circle cx="680" cy="120" r="220" fill="#BE185D" opacity="0.16" />
+  <circle cx="140" cy="380" r="180" fill="#F43F5E" opacity="0.10" />
+
+  <!-- Browser Header Bar -->
+  <rect x="0" y="0" width="800" height="46" fill="#070B16" />
+  <line x1="0" y1="46" x2="800" y2="46" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <circle cx="24" cy="23" r="6" fill="#EF4444" />
+  <circle cx="44" cy="23" r="6" fill="#F59E0B" />
+  <circle cx="64" cy="23" r="6" fill="#10B981" />
+
+  <!-- Address Bar -->
+  <rect x="110" y="10" width="450" height="26" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+  <text x="130" y="27" fill="rgba(255,255,255,0.5)" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">https://mereswari.com</text>
+
+  <!-- Live Status Pill in Header -->
+  <rect x="690" y="12" width="86" height="22" rx="11" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.4)" stroke-width="1" />
+  <circle cx="704" cy="23" r="3.5" fill="#10B981" />
+  <text x="714" y="27" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">ONLINE</text>
+
+  <!-- Card Graphic Center Container -->
+  <g transform="translate(50, 85)">
+    <!-- Mockup Inner Card -->
+    <rect x="0" y="0" width="700" height="350" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+
+    <!-- Top Accent Bar -->
+    <rect x="0" y="0" width="700" height="4" rx="2" fill="url(#glow_mereswari)" />
+
+    <!-- Project Icon Badge -->
+    <rect x="40" y="40" width="70" height="70" rx="18" fill="rgba(255,255,255,0.05)" stroke="#BE185D" stroke-width="1.5" />
+    <text x="75" y="85" fill="#FFFFFF" font-size="32" text-anchor="middle">👗</text>
+
+    <!-- Meta Tag Pill -->
+    <rect x="130" y="45" width="220" height="24" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+    <circle cx="145" cy="57" r="4" fill="#F43F5E" />
+    <text x="156" y="61" fill="rgba(255,255,255,0.85)" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">LUXURY APPAREL STORE</text>
+
+    <!-- Project Title -->
+    <text x="130" y="98" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800">Mereswari Fashion</text>
+
+    <!-- UI Wireframe Blocks -->
+    <g transform="translate(40, 140)">
+      <!-- Left Hero Column -->
+      <rect x="0" y="0" width="340" height="150" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+      <rect x="20" y="25" width="160" height="12" rx="6" fill="#BE185D" opacity="0.8" />
+      <rect x="20" y="50" width="260" height="8" rx="4" fill="rgba(255,255,255,0.2)" />
+      <rect x="20" y="66" width="220" height="8" rx="4" fill="rgba(255,255,255,0.15)" />
+      <rect x="20" y="82" width="180" height="8" rx="4" fill="rgba(255,255,255,0.1)" />
+      <!-- Button Mock -->
+      <rect x="20" y="105" width="100" height="26" rx="6" fill="#BE185D" opacity="0.9" />
+      <text x="70" y="122" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">EXPLORE LIVE →</text>
+
+      <!-- Right Graphic Column -->
+      <rect x="360" y="0" width="260" height="150" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+      <circle cx="490" cy="60" r="35" fill="none" stroke="#F43F5E" stroke-width="3" stroke-dasharray="160 40" opacity="0.7" />
+      <rect x="390" y="115" width="200" height="12" rx="6" fill="rgba(255,255,255,0.08)" />
+    </g>
+  </g>
+</svg>
