@@ -2121,6 +2121,55 @@ textarea.form-control {
   pointer-events: none;
 }
 
+.rg-calc-hero .calc-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+}
+
+.rg-calc-hero h1,
+.rg-calc-hero .calc-hero-title {
+  color: #ffffff !important;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 16px 0;
+  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+}
+
+.rg-calc-hero .calc-hero-desc {
+  color: #CBD5E1 !important;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 720px;
+}
+
+.rg-calc-hero .calc-hero-desc a {
+  color: #00D2FF !important;
+  text-decoration: underline;
+}
+
+.rg-calc-hero .breadcrumbs-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #94A3B8;
+  margin-bottom: 8px;
+}
+
+.rg-calc-hero .breadcrumbs-wrap a {
+  color: #CBD5E1;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.rg-calc-hero .breadcrumbs-wrap a:hover {
+  color: #00D2FF;
+}
+
 .rg-calc-main {
   margin-top: -75px;
   position: relative;
@@ -2603,14 +2652,178 @@ textarea.form-control {
   font-size: 0.92rem;
 }
 
+/* Structured Section Cards */
+.structured-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-color);
+  border-radius: 20px;
+  padding: 36px 40px;
+  box-shadow: 0 10px 30px rgba(11, 19, 43, 0.05);
+  margin-bottom: 30px;
+  transition: all 0.2s ease;
+}
+
+.structured-card:hover {
+  box-shadow: 0 16px 36px rgba(0, 102, 255, 0.08);
+  border-color: #CBD5E1;
+}
+
+.structured-card-header {
+  margin-bottom: 18px;
+}
+
+.structured-card h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  color: var(--navy-900);
+  font-family: var(--font-heading);
+}
+
+.content-box {
+  background: #F8FAFC;
+  border-left: 4px solid #0066FF;
+  padding: 18px 24px;
+  border-radius: 0 14px 14px 0;
+  margin: 18px 0;
+  color: var(--slate-800);
+  font-weight: 500;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+/* Modern Tables */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(11, 19, 43, 0.04);
+  margin: 20px 0;
+  max-width: 100%;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  min-width: 480px;
+}
+
+.custom-table th, .custom-table td {
+  padding: 14px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.custom-table th {
+  background: #F1F5F9;
+  color: var(--navy-900);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.custom-table tr:last-child td {
+  border-bottom: none;
+}
+
+.custom-table tr:hover td {
+  background: #F8FAFC;
+}
+
+.custom-table .text-right {
+  text-align: right;
+}
+
+/* FAQ Accordion */
+details.faq-item {
+  background: #fff;
+  border: 1.5px solid var(--border-color);
+  border-radius: 14px;
+  margin-bottom: 12px;
+  padding: 0 22px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+details.faq-item[open] {
+  border-color: #0066FF;
+  box-shadow: 0 6px 18px rgba(0, 102, 255, 0.08);
+}
+
+details.faq-item summary.faq-question {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 18px 0;
+  color: var(--navy-900);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+details.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-answer {
+  padding: 0 0 18px 0;
+  color: var(--slate-700);
+  line-height: 1.7;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+/* All Device Responsiveness */
 @media (max-width: 900px) {
+  .rg-calc-hero {
+    padding: 40px 0 95px 0;
+  }
+  .rg-calc-main {
+    margin-top: -65px;
+  }
   .rg-calc-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .structured-card {
+    padding: 26px 22px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .rg-calc-hero h1,
+  .rg-calc-hero .calc-hero-title {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+  .rg-calc-hero .calc-hero-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .rg-calc-card {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
   .rg-results {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .rg-amt input {
+    font-size: 1.45rem;
+  }
+  .rg-chips button {
+    padding: 5px 12px;
+    font-size: 0.82rem;
+  }
+  .structured-card {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+  .structured-card h2 {
+    font-size: 1.25rem;
   }
 }
