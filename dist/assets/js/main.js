@@ -39,9 +39,32 @@ function initNavbar() {
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close mobile menu when clicking nav link
+    // Mobile Dropdown Toggle Handler
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownItem = document.querySelector('.nav-item-dropdown');
+    if (dropdownToggle && dropdownItem) {
+      dropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 900) {
+          e.preventDefault();
+          dropdownItem.classList.toggle('open');
+        }
+      });
+    }
+
+    // Close mobile menu when clicking nav link or dropdown item
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
+        if (link.classList.contains('dropdown-toggle') && window.innerWidth <= 900) {
+          return; // Let mobile dropdown toggle handle it
+        }
+        mainNav.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', () => {
         mainNav.classList.remove('open');
         mobileToggle.classList.remove('active');
         document.body.style.overflow = '';
@@ -65,6 +88,8 @@ function initNavbar() {
 function highlightActiveNav() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.nav-link');
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
+  const dropdownToggle = document.querySelector('.nav-item-dropdown .dropdown-toggle');
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
@@ -72,6 +97,19 @@ function highlightActiveNav() {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
+    }
+  });
+
+  if (currentPath === 'gst-calculator-nz-seo.html' || currentPath === 'reverse-gst-calculator-nz.html') {
+    if (dropdownToggle) dropdownToggle.classList.add('active');
+  }
+
+  dropdownItems.forEach(item => {
+    const href = item.getAttribute('href');
+    if (href === currentPath) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
     }
   });
 }
