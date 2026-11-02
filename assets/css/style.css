@@ -2152,22 +2152,35 @@ textarea.form-control {
 }
 
 .rg-calc-hero .breadcrumbs-wrap {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 6px 8px;
   font-size: 0.88rem;
   color: #94A3B8;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
+  line-height: 1.4;
 }
 
 .rg-calc-hero .breadcrumbs-wrap a {
   color: #CBD5E1;
   text-decoration: none;
   transition: color 0.15s;
+  white-space: nowrap;
 }
 
 .rg-calc-hero .breadcrumbs-wrap a:hover {
   color: #00D2FF;
+}
+
+.rg-calc-hero .breadcrumbs-wrap span {
+  white-space: nowrap;
+}
+
+.rg-calc-hero .breadcrumbs-wrap .crumb-sep {
+  color: #64748B;
+  user-select: none;
+  font-weight: 300;
 }
 
 .rg-calc-main {
@@ -2175,6 +2188,8 @@ textarea.form-control {
   position: relative;
   z-index: 5;
   padding-bottom: 70px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .rg-calc-grid {
@@ -2182,6 +2197,8 @@ textarea.form-control {
   grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
   gap: 32px;
   align-items: start;
+  width: 100%;
+  max-width: 100%;
 }
 
 .rg-calc-card {
@@ -2190,6 +2207,24 @@ textarea.form-control {
   border-radius: 24px;
   padding: clamp(24px, 4vw, 40px);
   box-shadow: 0 20px 45px -10px rgba(11, 19, 43, 0.08), 0 0 1px 1px rgba(0, 0, 0, 0.03);
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.calc-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  background: #F1F5F9;
+  color: var(--slate-600);
+  border-radius: 99px;
+  border: 1px solid var(--border-color);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 .rg-calc-header {
@@ -2441,6 +2476,11 @@ textarea.form-control {
   padding: 24px;
   box-shadow: 0 20px 45px -10px rgba(11, 19, 43, 0.08);
   margin-bottom: 24px;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .rg-stage {
@@ -2537,6 +2577,11 @@ textarea.form-control {
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0 20px 45px -10px rgba(11, 19, 43, 0.08);
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .rg-rhead {
@@ -2661,6 +2706,10 @@ textarea.form-control {
   box-shadow: 0 10px 30px rgba(11, 19, 43, 0.05);
   margin-bottom: 30px;
   transition: all 0.2s ease;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .structured-card:hover {
@@ -2700,13 +2749,17 @@ textarea.form-control {
   box-shadow: 0 4px 20px rgba(11, 19, 43, 0.04);
   margin: 20px 0;
   max-width: 100%;
+  width: 100%;
+  min-width: 0;
+  display: block;
+  box-sizing: border-box;
 }
 
 .custom-table {
   width: 100%;
   border-collapse: collapse;
   font-variant-numeric: tabular-nums;
-  min-width: 480px;
+  min-width: 440px;
 }
 
 .custom-table th, .custom-table td {
@@ -2786,8 +2839,10 @@ details.faq-item summary::-webkit-details-marker {
     margin-top: -65px;
   }
   .rg-calc-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) !important;
     gap: 24px;
+    width: 100%;
+    max-width: 100%;
   }
   .structured-card {
     padding: 26px 22px;
@@ -2795,6 +2850,14 @@ details.faq-item summary::-webkit-details-marker {
 }
 
 @media (max-width: 640px) {
+  .rg-calc-hero {
+    padding: 30px 0 85px 0;
+  }
+  .rg-calc-hero .breadcrumbs-wrap {
+    font-size: 0.8rem;
+    gap: 4px 6px;
+    margin-bottom: 12px;
+  }
   .rg-calc-hero h1,
   .rg-calc-hero .calc-hero-title {
     font-size: 1.85rem;
@@ -2804,7 +2867,20 @@ details.faq-item summary::-webkit-details-marker {
     font-size: 1rem;
     line-height: 1.6;
   }
+  .rg-calc-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    gap: 8px;
+  }
+  .rg-calc-header h2 {
+    font-size: 1.25rem;
+  }
   .rg-calc-card {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+  .rg-visual-card,
+  .rg-race-card {
     padding: 20px 16px;
     border-radius: 18px;
   }
@@ -2825,5 +2901,58 @@ details.faq-item summary::-webkit-details-marker {
   }
   .structured-card h2 {
     font-size: 1.25rem;
+  }
+  .custom-table {
+    min-width: 400px;
+  }
+  .custom-table th, .custom-table td {
+    padding: 10px 14px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .rg-calc-hero h1,
+  .rg-calc-hero .calc-hero-title {
+    font-size: 1.6rem;
+  }
+  .rg-calc-card {
+    padding: 18px 14px;
+  }
+  .rg-seg {
+    padding: 4px;
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+  .rg-seg button {
+    padding: 8px 6px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+  .rg-chips {
+    gap: 6px;
+    margin: 10px 0 16px;
+  }
+  .rg-chips button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  .rg-copy-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .rg-rhead {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .rg-rhead b {
+    font-size: 0.95rem;
+  }
+  .custom-table {
+    min-width: 360px;
   }
 }
