@@ -6,3 +6,7 @@
 /blog.html https://blogs.websol.nz/ 301
 /blog-post.html https://blogs.websol.nz/ 301
 /blog/* https://blogs.websol.nz/ 301
+/gst-calculator-nz-seo /gst-calculator-nz 301
+/gst-calculator-nz-seo.html /gst-calculator-nz 301
+/gst-calculator-nz.html /gst-calculator-nz 301
+/reverse-gst-calculator-nz.html /reverse-gst-calculator-nz 301
