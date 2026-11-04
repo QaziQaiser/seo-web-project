@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initForms();
   highlightActiveNav();
   initPortfolioFilters();
+  initCustomSelects();
 });
 
 /* -------------------------------------------------------------------------- */
@@ -308,3 +309,91 @@ function initPortfolioFilters() {
   });
 }
 
+
+/* -------------------------------------------------------------------------- */
+/* Custom Select Dropdowns (Inside-Form Clean Menu)                            */
+/* -------------------------------------------------------------------------- */
+function initCustomSelects() {
+  const customSelects = document.querySelectorAll('.custom-select-wrap');
+  if (customSelects.length === 0) return;
+
+  customSelects.forEach(wrap => {
+    const trigger = wrap.querySelector('.custom-select-trigger');
+    const menu = wrap.querySelector('.custom-select-menu');
+    const hiddenInput = wrap.querySelector('input[type="hidden"]');
+    const displayValue = wrap.querySelector('.custom-select-value');
+    const options = wrap.querySelectorAll('.custom-select-option');
+
+    if (!trigger || !menu) return;
+
+    // Toggle menu
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = wrap.classList.contains('open');
+      // Close other selects
+      document.querySelectorAll('.custom-select-wrap.open').forEach(w => {
+        if (w !== wrap) {
+          w.classList.remove('open');
+          w.querySelector('.custom-select-trigger')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+      wrap.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+    });
+
+    // Select option
+    options.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const val = opt.getAttribute('data-value') || opt.textContent.trim();
+        if (hiddenInput) {
+          hiddenInput.value = val;
+          hiddenInput.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+        if (displayValue) {
+          displayValue.textContent = opt.textContent.trim();
+        }
+        options.forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        wrap.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Handle form reset
+    const form = wrap.closest('form');
+    if (form) {
+      form.addEventListener('reset', () => {
+        setTimeout(() => {
+          const firstOpt = options[0];
+          if (firstOpt) {
+            options.forEach(o => o.classList.remove('selected'));
+            firstOpt.classList.add('selected');
+            if (displayValue) displayValue.textContent = firstOpt.textContent.trim();
+            if (hiddenInput) hiddenInput.value = firstOpt.getAttribute('data-value') || firstOpt.textContent.trim();
+          }
+        }, 50);
+      });
+    }
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.custom-select-wrap.open').forEach(wrap => {
+      if (!wrap.contains(e.target)) {
+        wrap.classList.remove('open');
+        wrap.querySelector('.custom-select-trigger')?.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.custom-select-wrap.open').forEach(wrap => {
+        wrap.classList.remove('open');
+        wrap.querySelector('.custom-select-trigger')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+}

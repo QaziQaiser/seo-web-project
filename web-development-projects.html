@@ -1542,20 +1542,27 @@
                   <input type="url" id="contactWebsite" name="website_url" class="form-control" placeholder="https://yourwebsite.co.nz">
                 </div>
                 <div class="form-group">
-                  <label for="contactCity">Your NZ City</label>
-                  <select id="contactCity" name="nz_city" class="form-control form-select">
-                    <option value="Auckland">Auckland</option>
-                    <option value="Christchurch">Christchurch</option>
-                    <option value="Wellington">Wellington</option>
-                    <option value="Hamilton">Hamilton</option>
-                    <option value="Tauranga">Tauranga</option>
-                    <option value="Dunedin">Dunedin</option>
-                    <option value="Palmerston North">Palmerston North</option>
-                    <option value="Napier">Napier</option>
-                    <option value="Nelson">Nelson</option>
-                    <option value="New Plymouth">New Plymouth</option>
-                    <option value="Other NZ Region / Global">Other NZ Region / Global</option>
-                  </select>
+                  <label id="nzCityLabel">Your NZ City</label>
+                  <div class="custom-select-wrap" id="nzCitySelectWrap">
+                    <input type="hidden" name="nz_city" id="nzCityInput" value="Auckland">
+                    <button type="button" class="custom-select-trigger" id="nzCityTrigger" aria-labelledby="nzCityLabel" aria-haspopup="listbox" aria-expanded="false">
+                      <span class="custom-select-value">Auckland</span>
+                      <svg class="custom-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <ul class="custom-select-menu" role="listbox" id="nzCityMenu" aria-labelledby="nzCityLabel">
+                      <li class="custom-select-option selected" role="option" data-value="Auckland">Auckland</li>
+                      <li class="custom-select-option" role="option" data-value="Christchurch">Christchurch</li>
+                      <li class="custom-select-option" role="option" data-value="Wellington">Wellington</li>
+                      <li class="custom-select-option" role="option" data-value="Hamilton">Hamilton</li>
+                      <li class="custom-select-option" role="option" data-value="Tauranga">Tauranga</li>
+                      <li class="custom-select-option" role="option" data-value="Dunedin">Dunedin</li>
+                      <li class="custom-select-option" role="option" data-value="Palmerston North">Palmerston North</li>
+                      <li class="custom-select-option" role="option" data-value="Napier">Napier</li>
+                      <li class="custom-select-option" role="option" data-value="Nelson">Nelson</li>
+                      <li class="custom-select-option" role="option" data-value="New Plymouth">New Plymouth</li>
+                      <li class="custom-select-option" role="option" data-value="Other NZ Region / Global">Other NZ Region / Global</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
